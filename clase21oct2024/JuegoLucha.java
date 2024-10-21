@@ -24,16 +24,15 @@ class JuegoLucha {
 
         // Mostrar el resultado de la pelea
         if (jugador1.estaVivo()) {
-            System.out.println(jugador1.getNombre() + " haganado la pelea .");
+            System.out.println(jugador1.getNombre() + " ha ganado la pelea .");
         } else {
-            System.out.println(jugador2.getNombre() + " haganado la pelea .");
+            System.out.println(jugador2.getNombre() + " ha ganado la pelea .");
         }
     }
 
     // Metodo que representa un turno de ataque
     private void turno(Personaje atacante, Personaje defensor) {
-        System.out.println(" Turno de " + atacante.getNombre() + ". Puntos de vida de " + defensor.getNombre() + ": "
-                + defensor.getPuntosDeVida());
+        System.out.println(" Turno de " + atacante.getNombre() + ". Puntos de vida de " + defensor.getNombre() + ": " + defensor.getPuntosDeVida());
         atacante.atacar(defensor);
         System.out.println(defensor.getNombre() + " ahora tiene " + defensor.getPuntosDeVida() + " puntos de vida .");
     }
